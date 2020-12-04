@@ -14,12 +14,14 @@ function EditTicketForm(props){
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleEditTicketFormSubmission} /* new code */ 
-        buttonText="Update Ticket" />
+        buttonText="Update Ticket"
+        nameText={props.names}/>
     </React.Fragment>
   );
 }
 
 EditTicketForm.propTypes = {
+  masterTicketList: PropTypes.object,
   onEditTicket: PropTypes.func
 };
 
